@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Continuous realistic nautical bobbing & ocean roll animation */
+@keyframes nauticalBob {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1.02);
+  }
+  25% {
+    transform: translateY(-8px) rotate(0.4deg) scale(1.022);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-0.25deg) scale(1.02);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-0.55deg) scale(1.018);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1.02);
+  }
+}
+
+@keyframes waterWaveShimmer {
+  0% {
+    transform: translateX(-4%) translateY(0px) scaleY(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(3%) translateY(-6px) scaleY(1.06);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateX(-4%) translateY(0px) scaleY(1);
+    opacity: 0.35;
+  }
+}
+
+.animate-nautical-bob {
+  animation: nauticalBob 9.5s ease-in-out infinite;
+  transform-origin: 55% 85%;
+  will-change: transform;
+}
+
+.animate-water-shimmer {
+  animation: waterWaveShimmer 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-dim":"#cbdbf5","inverse-surface":"#213145","tertiary-container":"#001f30","on-secondary":"#ffffff","on-surface-variant":"#44474d","background":"#f8f9ff","surface-container-lowest":"#ffffff","inverse-primary":"#b7c7e5","on-surface":"#0b1c30","tertiary-fixed-dim":"#89ceff","emerald-glow":"#059669","error":"#ba1a1a","on-tertiary-fixed":"#001e2f","secondary-fixed":"#6ffbbe","on-primary-fixed-variant":"#374860","error-container":"#ffdad6","outline-variant":"#c4c6cd","on-secondary-container":"#00714d","border-subtle":"#CBD5E1","outline":"#74777e","surface-tint":"#4f5f78","surface":"#f8f9ff","on-primary-container":"#7586a0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-fixed":"#002113","surface-bright":"#f8f9ff","on-tertiary":"#ffffff","abyssal-navy":"#071526","primary-fixed-dim":"#b7c7e5","surface-card":"#FFFFFF","surface-container-high":"#dce9ff","on-error-container":"#93000a","on-primary":"#ffffff","on-error":"#ffffff","tertiary-fixed":"#c9e6ff","surface-variant":"#d3e4fe","on-tertiary-fixed-variant":"#004c6e","on-tertiary-container":"#008dc9","secondary-container":"#6cf8bb","primary":"#000206","secondary-fixed-dim":"#4edea3","surface-container":"#e5eeff","on-primary-fixed":"#0a1c32","primary-fixed":"#d4e3ff","surface-canvas":"#F8FAFC","tertiary":"#000205","signal-cyan":"#38BDF8","surface-container-highest":"#d3e4fe","on-background":"#0b1c30","on-secondary-fixed-variant":"#005236","primary-container":"#0b1d33","border-hairline":"#E2E8F0","secondary":"#006c49"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","gutter-mobile":"1rem","gutter":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem","margin":"3rem"},"fontFamily":{"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-sm":["Manrope"],"label-sm":["JetBrains Mono"],"body-lg":["Manrope"],"headline-xl":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-md":["Manrope"],"label-md":["JetBrains Mono"]},"fontSize":{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><div class="fixed top-0 left-0 right-0 z-50"><div class="bg-abyssal-navy text-surface-container-lowest h-9 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] w-full mx-auto flex items-center justify-between"><div class="flex items-center gap-space-sm overflow-hidden"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-secondary/20 text-secondary-fixed rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>Advisory</span><p class="font-label-sm text-label-sm text-surface-variant truncate">Latest Maritime Advisory &amp; News: East Wharf &amp; TPX operations running at full capacity</p></div><div class="flex items-center gap-space-md shrink-0"><a class="font-label-sm text-label-sm text-secondary-fixed hover:text-on-secondary transition-colors underline-offset-4 hover:underline" data-path="news-updates" href="#">Learn More →</a><div class="hidden md:flex items-center gap-space-sm pl-space-md border-l border-white/10 font-label-sm text-label-sm text-surface-variant"><span>PORT OPS: 24/7 ACTIVE</span><span class="text-border-subtle">•</span><span>KARACHI • QASIM • GWADAR</span></div></div></div></div><header class="w-full bg-surface-card/95 backdrop-blur-xl border-b border-border-hairline shadow-[0_1px_8px_rgba(7,21,38,0.03)]"><div class="h-20 max-w-[1440px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="East Wind Shipping Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNM8DN6K4aJQTTyfit1bFq78YxGmsguG1ZZooUM_xUdaFbtk8uQzUduBUwMjPC596pR3yzKwcAqiA3hxJzjmOaOEj1jEvmvkW7Tx-MnrleyisQsrZEF4kHtfqi7r3gMVxxIB67UqQefFLS4RV7Qif6a5sHyToC4zWlPLJvwae-ohUz7A9ROXn_D2vK48CiwutjlEDTU0mn28qd4Ui9dDyXCtgl80JtBggOhyDYg7isHu0BzjqIk7dJKKM"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none group-hover:text-secondary transition-colors">EAST WIND</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mt-0.5">Shipping Co. (Pvt) Ltd.</span></div></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-secondary font-headline-sm"><a aria-current="page" class="transition-colors py-2 text-secondary font-headline-sm" data-path="home" href="#">Home</a><div class="relative group py-2"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors inline-flex items-center gap-1" data-path="about-profile" href="#">About &amp; Profile<span class="material-symbols-outlined text-[16px] text-outline transition-transform group-hover:rotate-180">expand_more</span></a><div class="absolute top-full left-0 w-56 bg-surface-card border border-border-hairline rounded-lg shadow-[0_12px_32px_-4px_rgba(7,21,38,0.06)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2"><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="about-profile" href="#">Corporate Profile</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="mission-values" href="#">Mission &amp; Values</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="quality-policy" href="#">Quality &amp; HSE Policy</a></div></div><div class="relative group py-2"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors inline-flex items-center gap-1" data-path="maritime-divisions" href="#">Maritime Divisions<span class="material-symbols-outlined text-[16px] text-outline transition-transform group-hover:rotate-180">expand_more</span></a><div class="absolute top-full left-0 w-64 bg-surface-card border border-border-hairline rounded-lg shadow-[0_12px_32px_-4px_rgba(7,21,38,0.06)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2"><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="maritime-divisions" href="#">Tanker Agency Services</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="maritime-divisions" href="#">Break Bulk &amp; Project Cargo</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="maritime-divisions" href="#">Container Feeder Representation</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="maritime-divisions" href="#">Dry Bulk Charters</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="maritime-divisions" href="#">Off-Dock Container Depot</a></div></div><div class="relative group py-2"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors inline-flex items-center gap-1" data-path="pakistan-ports" href="#">Pakistan Ports<span class="material-symbols-outlined text-[16px] text-outline transition-transform group-hover:rotate-180">expand_more</span></a><div class="absolute top-full left-0 w-56 bg-surface-card border border-border-hairline rounded-lg shadow-[0_12px_32px_-4px_rgba(7,21,38,0.06)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2"><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="pakistan-ports" href="#">Port of Karachi (KPT)</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="pakistan-ports" href="#">Port Muhammad Bin Qasim</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="pakistan-ports" href="#">Gwadar Deep Water Port</a><a class="block px-3 py-2 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="pakistan-ports" href="#">Gadani Ship Recycling Yard</a></div></div><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="country-profile" href="#">Country Profile</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="news-updates" href="#">News &amp; Updates</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden sm:inline-flex items-center px-4 py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg border border-border-hairline transition-colors" data-path="quick-tracking-inquiry" href="#">Quick Tracking / Inquiry</a><a class="inline-flex items-center px-4 py-2 bg-abyssal-navy hover:bg-primary text-on-primary font-body-sm text-body-sm rounded-lg border border-abyssal-navy hover:border-secondary transition-all shadow-[0_1px_8px_rgba(7,21,38,0.06)]" data-path="contact-us" href="#">Contact Us</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header></div><main class="w-full pt-[116px] bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<!-- =========================================================================
+       HERO: CINEMATIC EDITORIAL SECTION WITH INTEGRATED BOBBING CONTAINER SHIP
+  ========================================================================= -->
+<section class="relative w-full bg-abyssal-navy text-surface-container-lowest overflow-hidden">
+<!-- Container Ship Animated Photographic Layer -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+<div class="w-full h-full relative">
+<!-- Looping Bobbing Container Ship Image Layer -->
+<img alt="East Wind Shipping Container Vessel in Karachi Waters" class="animate-nautical-bob absolute -top-12 -bottom-16 -left-12 -right-12 w-[calc(100%+6rem)] h-[calc(100%+7rem)] object-cover object-[center_42%] opacity-65 select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuHTSGocWvtjipw4_tzrkBV-kDTZ3_L-XWxl8UOejc1Zz_TEMROLHLjCFSGT0ID_V7B5FTNzaXD_Pkf0pZnx9VuG3VNlnXJmcRkv5BN5OoURc67wRBgUVnxpV0q9ZAIbKp8hH6XCy3UXMPD0d5XoUcJgPe4aNtFDFucNt1an9aoW_dilmOQ0ORlIDClivrXS7IC_nFRr2qDQNwSjSpJHpEgRnJneaspMWKJLKoo0ybmum_tNdFiAGkUN4Qr5l-QAMtJA"/>
+<!-- Deep Maritime Dark Navy & Directional Fog Gradients for Crisp Content Legibility -->
+<div class="absolute inset-0 bg-gradient-to-r from-abyssal-navy/95 via-abyssal-navy/85 to-primary-container/70"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-abyssal-navy via-abyssal-navy/60 to-abyssal-navy/85"></div>
+<!-- Water Horizon & Ripple Surge Mist -->
+<div class="animate-water-shimmer absolute -bottom-10 left-0 right-0 h-48 bg-gradient-to-t from-abyssal-navy via-abyssal-navy/90 to-transparent pointer-events-none"></div>
+<!-- Realistic animated ocean wave ripple effect along the hull line -->
+<div class="absolute bottom-16 left-0 right-0 h-28 bg-[radial-gradient(ellipse_at_bottom,_rgba(56,189,248,0.12),transparent_70%)] animate-pulse pointer-events-none"></div>
+</div>
+</div>
+<!-- Atmospheric subtle ambient radial glow -->
+<div class="absolute -top-32 -right-32 w-[600px] h-[600px] bg-secondary/15 rounded-full blur-[140px] pointer-events-none z-[1]"></div>
+<div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-signal-cyan/10 rounded-full blur-[120px] pointer-events-none z-[1]"></div>
+<div class="max-w-[1440px] mx-auto px-gutter py-space-xl lg:py-24 relative z-10">
+<!-- Top Meta Coordinate Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-lg mb-space-lg border-b border-white/15 backdrop-blur-[2px]">
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm tracking-widest text-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-glow shadow-[0_0_8px_#059669]"></span>
+<span class="text-white font-medium">PK-KHI: 24.8607° N, 67.0011° E</span>
+<span class="text-white/30">|</span>
+<span class="text-secondary-fixed font-semibold tracking-wider">VESSEL AGENCY &amp; MULTIMODAL LOGISTICS</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-surface-variant">
+<span class="hidden sm:inline text-white/80">PORT AGENTS • LINER REPRESENTATION • OFF-DOCK CFS</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-white text-[10px] tracking-widest font-semibold uppercase border border-white/10">Est. Pakistan</span>
+</div>
+</div>
+<!-- Main Asymmetrical Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Column: Typography & Narrative (7 cols) -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low/20 backdrop-blur-md border border-white/10 text-secondary-fixed rounded mb-space-md w-fit">
+<span class="material-symbols-outlined text-[16px] text-emerald-glow">anchor</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Premier Maritime Gateway of Pakistan</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl lg:text-[56px] lg:leading-[62px] text-white tracking-tight mb-space-md drop-shadow-md">
+            Precision Maritime Logistics &amp; Shipping Agency in Pakistan.
+          </h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mb-space-xl leading-relaxed drop-shadow-sm">
+            East Wind Shipping delivers full-service vessel husbandry, dry/liquid chartering, and off-dock container terminal management through the vast experience, skill, and disciplined professionalism of our seasoned crew and port personnel.
+          </p>
+<!-- Primary & Secondary CTA triggers -->
+<div class="flex flex-wrap items-center gap-space-md mb-space-xl">
+<a class="px-6 py-3.5 bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-body-sm text-body-sm font-semibold rounded transition-colors flex items-center gap-2 shadow-xl hover:shadow-2xl" href="#divisions">
+<span>Explore Fleet &amp; Agency Services</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-white font-body-sm text-body-sm rounded transition-colors flex items-center gap-2" href="#contact">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">support_agent</span>
+<span>Contact Vessel Agency</span>
+</a>
+</div>
+<!-- Micro Metric Strip (3-column counter) -->
+<div class="grid grid-cols-3 gap-gutter pt-space-md border-t border-white/15">
+<div>
+<div class="font-headline-md text-headline-md text-white font-semibold tracking-tight">24,000<span class="text-secondary-fixed font-normal text-headline-sm">+</span></div>
+<div class="font-label-sm text-label-sm text-surface-variant tracking-wider uppercase mt-1">m² Depot (TPX &amp; Keamari)</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-white font-semibold tracking-tight">4<span class="text-secondary-fixed font-normal text-headline-sm"> Hubs</span></div>
+<div class="font-label-sm text-label-sm text-surface-variant tracking-wider uppercase mt-1">Major Ports Active</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-white font-semibold tracking-tight">5<span class="text-secondary-fixed font-normal text-headline-sm">+</span></div>
+<div class="font-label-sm text-label-sm text-surface-variant tracking-wider uppercase mt-1">Specialised Maritime Divs</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Dispatch & Operational Inquiry Console (5 cols) -->
+<div class="lg:col-span-5">
+<div class="bg-surface-card/95 backdrop-blur-md text-on-surface rounded-xl p-space-lg shadow-2xl relative border border-white/20">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-border-hairline">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-glow"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Terminal Operations Desk</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Direct Dispatch</span>
+</div>
+<!-- Tabbed Selector -->
+<div class="flex p-1 bg-surface-container-low rounded mb-space-md">
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm rounded transition-all bg-surface-card text-primary font-medium shadow-sm" id="tab-cargo" onclick="switchWidgetTab('cargo')">Cargo Agency</button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm rounded transition-all text-on-surface-variant hover:text-primary" id="tab-depot" onclick="switchWidgetTab('depot')">Container Depot</button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm rounded transition-all text-on-surface-variant hover:text-primary" id="tab-schedule" onclick="switchWidgetTab('schedule')">Port ETA/Berth</button>
+</div>
+<!-- TAB 1: Cargo Agency -->
+<form class="space-y-space-md" id="panel-cargo" onsubmit="event.preventDefault(); alert('Inquiry dispatched to East Wind Shipping Agency Desk. A representative will contact you shortly.');">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Vessel / Commodity Class</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-card transition-all">
+<option>Tanker (Chemicals, Molasses, Ethanol, Petroleum)</option>
+<option>Break Bulk (Steel, Project &amp; Heavy Lift)</option>
+<option>Dry Bulk (Grains/Seeds, Fertilizer, Coal, Scrap)</option>
+<option>Container Feeder Service (GFS Representative)</option>
+<option>Demo Ships &amp; Ship Recycling (Gadani Anchorage)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Port Hub</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Karachi Port Trust (KPT)</option>
+<option>Port Qasim (PQA)</option>
+<option>Gwadar Port (GPA)</option>
+<option>Gadani Anchorage</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Service Type</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Full Agency &amp; Husbandry</option>
+<option>Protective Agency</option>
+<option>Stevedoring &amp; Discharging</option>
+<option>Bunkers &amp; Slops</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Principal / Consignor Email</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-card transition-all" placeholder="operations@principal-line.com" required="" type="email"/>
+</div>
+<button class="w-full py-3 bg-abyssal-navy hover:bg-primary text-on-primary font-body-sm text-body-sm font-semibold rounded flex items-center justify-center gap-2 transition-colors" type="submit">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">send</span>
+<span>Request Port Agency Disbursal &amp; Proforma</span>
+</button>
+</form>
+<!-- TAB 2: Container Depot (Hidden by default) -->
+<form class="space-y-space-md hidden" id="panel-depot" onsubmit="event.preventDefault(); alert('Depot slot inquiry transmitted to TPX &amp; Keamari dispatch office.');">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Depot Yard</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>TPX – M.T. Khan Road (16,000 m² / 2km from Port)</option>
+<option>East Wharf – Keamari Facility (8,000 m² Portside)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Service Demand</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Empty Storage (MLO/NVOCC)</option>
+<option>IICL Container Survey</option>
+<option>Structural Box Repair</option>
+<option>Reefer Pre-Trip Inspection</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">TEU Volume</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none" placeholder="e.g. 50-250 TEU" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Contact Email</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none" placeholder="equipment@carrier.com" type="email"/>
+</div>
+<button class="w-full py-3 bg-secondary hover:bg-emerald-glow text-on-secondary font-body-sm text-body-sm font-semibold rounded flex items-center justify-center gap-2 transition-colors" type="submit">
+<span class="material-symbols-outlined text-[18px]">warehouse</span>
+<span>Check Depot Space &amp; Tariffs</span>
+</button>
+</form>
+<!-- TAB 3: Schedule / Port ETA (Hidden by default) -->
+<div class="space-y-space-sm hidden" id="panel-schedule">
+<div class="p-3 bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary text-[15px]">GFS GULF EXPRESS V.2408</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Dubai (Jebel Ali) → Karachi (KICT)</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-secondary font-semibold">BERTHED</div>
+<div class="font-label-sm text-label-sm text-outline">Depart: 18:00 PKT</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary text-[15px]">EVER BRAVE V.0041W</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Singapore → Port Qasim (QICT)</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-abyssal-navy px-2 py-0.5 rounded text-[11px]">AT ANCHORAGE</div>
+<div class="font-label-sm text-label-sm text-outline">Berth: Tomorrow</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary text-[15px]">MT ARABIAN TIDE</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Chemical / Ethanol → Keamari OP-II</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-emerald-glow font-semibold">DISCHARGING</div>
+<div class="font-label-sm text-label-sm text-outline">East Wharf KPT</div>
+</div>
+</div>
+<a class="block w-full text-center py-2.5 bg-surface-container-high hover:bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors mt-2" href="#contact">
+                Request Full Line Manifest &amp; Berthing Advisory →
+              </a>
+</div>
+<!-- Footer micro assurance -->
+<div class="pt-3 mt-space-sm border-t border-border-hairline flex items-center justify-between text-[11px] font-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-glow"></span>EDI WebOC Connected</span>
+<span>24/7 Operations Room</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 2: ABOUT & HERITAGE SHOWCASE (GLOBAL ENTERPRISE & ALLIANCES)
+  ========================================================================= -->
+<section class="w-full bg-surface-card py-space-xl lg:py-24">
+<div class="max-w-[1440px] mx-auto px-gutter">
+<!-- Section Label -->
+<div class="flex items-center gap-2 mb-space-sm font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">
+<span class="w-6 h-px bg-secondary"></span>
+<span>Corporate Pedigree &amp; Liner Heritage</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center mb-space-xl">
+<div class="lg:col-span-8">
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            A prominent, trusted name in the Shipping Industry of Pakistan and global maritime trade corridors.
+          </h2>
+</div>
+<div class="lg:col-span-4">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Since its inception, East Wind Shipping has gained the profound confidence of its Principals and Customers through the unyielding skill level, professionalism, and seasoned experience of its crew and key leadership personnel.
+          </p>
+</div>
+</div>
+<!-- Architectural Bento of Strategic Alliances -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Green Pak Shipping / Evergreen -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-transform hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Liner Agency Alliance</span>
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Green Pak Shipping</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md uppercase">Evergreen Container Line Agency</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              East Wind Shipping is an integral part of a premier shipping enterprise holding an established Liner Agency — Green Pak Shipping, proudly representing <strong class="text-on-surface">Evergreen Container Line</strong> across nationwide port terminals in Pakistan.
+            </p>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Global Container Liner</span>
+<span class="text-secondary font-semibold">Karachi &amp; Qasim</span>
+</div>
+</div>
+<!-- Card 2: Global Feeder Shipping LLC -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-transform hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-signal-cyan font-bold">Partner &amp; Principal</span>
+<span class="material-symbols-outlined text-signal-cyan">directions_boat</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Global Feeder Shipping LLC</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md uppercase">Container Feeder Market Leader</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Our partners own and manage <strong class="text-on-surface">Global Feeder Shipping LLC (GFS)</strong>, a dominant feeder industry leader serving the United Arab Emirates, Middle East, Arabian &amp; Upper Arabian Gulf, Indian Subcontinent, SE Asia, and the Far East.
+            </p>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Feeder Network Hub</span>
+<span class="text-signal-cyan font-semibold">Arabian Gulf &amp; Asia</span>
+</div>
+</div>
+<!-- Card 3: Crew Competence & Key Personnel -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-transform hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Operational Competence</span>
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Crew &amp; Master Mariners</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md uppercase">Vast Maritime Experience</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              East Wind delivers through the deep operational mastery of its port captains, boarding agents, and customs specialists, assuring prompt vessel turnarounds, zero demurrage risk, and rapid documentation across all Pakistan berths.
+            </p>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Husbandry &amp; Turnaround</span>
+<span class="text-primary font-semibold">24/7 Boarding Agents</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 3: MARITIME FLEET & SPECIALISED CARGO DIVISIONS
+  ========================================================================= -->
+<section class="w-full bg-surface py-space-xl lg:py-24" id="divisions">
+<div class="max-w-[1440px] mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-2 mb-space-xs font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">
+<span class="w-6 h-px bg-secondary"></span>
+<span>Comprehensive Vessel Husbandry</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Specialised Maritime Divisions</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Handling the broadest range of vessels and cargoes across Pakistani sea lanes with uncompromising maritime discipline.
+        </p>
+</div>
+<!-- 5 Key Divisions Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Division 1: Tankers -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors mb-space-md">
+<span class="material-symbols-outlined text-[26px]">water_drop</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Liquid Cargoes &amp; Energy</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Tankers Division</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Dedicated husbandry and agency for chemical, oil, and specialized product tankers discharging and loading at specialized petroleum berths.
+            </p>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Chemicals &amp; Industrial Solvents</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Molasses &amp; Bulk Ethanol Exports</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Petroleum Products &amp; Clean Oils</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Terminal Berths: OP-I, II, III &amp; FOTCO</span>
+<a class="text-primary font-semibold hover:text-secondary flex items-center gap-1" href="#contact">Inquire →</a>
+</div>
+</div>
+<!-- Division 2: Break Bulk -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors mb-space-md">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Heavy Lift &amp; Industrial</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Break Bulk Division</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Handling complex non-containerized cargo with engineered rigging, heavy-lift direct discharge, and rapid customs transit coordination.
+            </p>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Steel Products, Coils &amp; Rebar Billets</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>General &amp; Breakbulk Consignments</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Power Generation &amp; Project Machinery</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Stevedoring &amp; Wharfage</span>
+<a class="text-primary font-semibold hover:text-secondary flex items-center gap-1" href="#contact">Inquire →</a>
+</div>
+</div>
+<!-- Division 3: Dry Bulk Ships -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors mb-space-md">
+<span class="material-symbols-outlined text-[26px]">grain</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Agri-Commodities &amp; Minerals</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Dry Bulk Vessels</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Supervision and agency for Supramax, Ultramax, and Panamax bulkers carrying essential national food security and industrial feedstocks.
+            </p>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Grains, Canola, Wheat &amp; Oilseeds</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Urea &amp; DAP Fertilizers</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Shredded Steel Scrap &amp; Thermal Coal</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Bulk Silos &amp; Open Yards</span>
+<a class="text-primary font-semibold hover:text-secondary flex items-center gap-1" href="#contact">Inquire →</a>
+</div>
+</div>
+<!-- Division 4: Container Feeder -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors mb-space-md">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Global Feeder Shipping LLC</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Container Feeder Division</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Representing Container Feeder Market Leader <strong class="text-on-surface">Global Feeder Shipping LLC</strong>. Connecting Karachi and Port Qasim into high-frequency regional loops.
+            </p>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Jebel Ali &amp; Upper Arabian Gulf Feeder Loops</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Indian Subcontinent Regional Connections</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Southeast Asia &amp; Far East Hub Relays</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Terminal Slots &amp; Transshipment</span>
+<a class="text-primary font-semibold hover:text-secondary flex items-center gap-1" href="#contact">Inquire →</a>
+</div>
+</div>
+<!-- Division 5: Cordelia & Demo Ships (Gadani) -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group lg:col-span-2">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors mb-space-md">
+<span class="material-symbols-outlined text-[26px]">sailing</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Cordelia Containers &amp; Ship Demolition</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Cordelia Container &amp; Gadani Demo Ships Division</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Specialized representation of Cordelia Container Line and dedicated ship demolition agency at the world-renowned Gadani Ship Recycling Yard. We handle beaching clearance, customs outward vessel inward surveys, and statutory maritime permissions.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm font-label-sm text-label-sm text-on-surface mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Cordelia Container Operations &amp; Booking</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Gadani Beaching Formalities &amp; Pilotage</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Demolition Vessel Customs De-registration</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Crew Sign-Off, Repatriation &amp; Gas-Free Certs</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Gadani Anchorage &amp; Beaching Agency</span>
+<a class="text-primary font-semibold hover:text-secondary flex items-center gap-1" href="#contact">Contact Gadani Agent →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 4: CONTAINER DEPOT & TERMINAL INFRASTRUCTURE (TPX & KEAMARI)
+  ========================================================================= -->
+<section class="w-full bg-surface-card py-space-xl lg:py-24">
+<div class="max-w-[1440px] mx-auto px-gutter">
+<div class="flex items-center gap-2 mb-space-xs font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">
+<span class="w-6 h-px bg-secondary"></span>
+<span>Off-Dock Container Terminal Infrastructure</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-space-xl items-end">
+<div class="lg:col-span-8">
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            24,000 Square Meters of Strategically Situated Depot Space.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm max-w-2xl">
+            Providing Empty Container Storage, receiving and delivery, and Container repair services directly catering to Container Main Line Operators (MLOs) and NVOCCs.
+          </p>
+</div>
+<div class="lg:col-span-4 flex items-center lg:justify-end gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm rounded">
+<span class="w-2 h-2 rounded-full bg-emerald-glow"></span>
+            24/7 CCTV &amp; Armed Perimeter
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm rounded">
+            IICL-5 Certified Repair
+          </span>
+</div>
+</div>
+<!-- Two Depot Facilities Showcase -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Depot 1: TPX MT Khan Road -->
+<div class="bg-surface rounded-xl p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded uppercase tracking-wider font-semibold">Facility 01 • Prime Corridor</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">2 KM FROM PORT</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">TPX Depot – M.T. Khan Road</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Situated in the immediate logistics artery on M.T. Khan Road, this massive 16,000 square meter depot provides ultra-rapid turnarounds for container carriers moving boxes to and from the Karachi Port gates.
+            </p>
+<!-- Metrics Matrix -->
+<div class="grid grid-cols-3 gap-space-sm p-space-md bg-surface-card rounded-lg mb-space-lg">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">16,000</div>
+<div class="font-label-sm text-label-sm text-outline">Square Meters</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">2.0 km</div>
+<div class="font-label-sm text-label-sm text-outline">From KPT Gates</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-emerald-glow font-bold">3,500+</div>
+<div class="font-label-sm text-label-sm text-outline">TEU Capacity</div>
+</div>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold mb-space-sm">Core Depot Operations</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Immediate receiving, storage, and fast release for MLO and NVOCC boxes.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Heavy-duty Kalmar and reach stackers for 5-high loaded/empty container stacking.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Complete EDI gate reporting, real-time container interchange (EIR) tracking.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Terminal ID: PK-EWS-TPX</span>
+<a class="text-secondary font-semibold hover:text-primary" href="#contact">Inquire Depot Space →</a>
+</div>
+</div>
+<!-- Depot 2: East Wharf Keamari -->
+<div class="bg-surface rounded-xl p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm rounded uppercase tracking-wider font-semibold">Facility 02 • Portside Enclave</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">PORTSIDE KEAMARI</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">East Wharf Facility – Keamari</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Covering 8,000 square meters right in the heart of Keamari port perimeter, providing zero-transit empty staging, container maintenance, survey, and washing for international container liners.
+            </p>
+<!-- Metrics Matrix -->
+<div class="grid grid-cols-3 gap-space-sm p-space-md bg-surface-card rounded-lg mb-space-lg">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">8,000</div>
+<div class="font-label-sm text-label-sm text-outline">Square Meters</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">0.4 km</div>
+<div class="font-label-sm text-label-sm text-outline">To East Wharf</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-emerald-glow font-bold">1,800+</div>
+<div class="font-label-sm text-label-sm text-outline">TEU Capacity</div>
+</div>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold mb-space-sm">Workshop &amp; Repair Capabilities</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>IICL certified structural container repair, patching, floor replacement, and welding.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Chemical container washing and deodorization facility for food-grade cargo boxes.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Direct rail siding and trailer direct access avoiding main city heavy vehicle hours.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Terminal ID: PK-EWS-KMR</span>
+<a class="text-secondary font-semibold hover:text-primary" href="#contact">Inquire Keamari Yard →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 5: PAKISTAN PORTS NETWORK DIRECTORY
+  ========================================================================= -->
+<section class="w-full bg-surface py-space-xl lg:py-24">
+<div class="max-w-[1440px] mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-2 mb-space-xs font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">
+<span class="w-6 h-px bg-secondary"></span>
+<span>National Maritime Gateway Coverage</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Pakistan Ports Directory</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          East Wind Shipping maintains full operational agency coverage across all major deep-water ports and specialized marine hubs across Pakistan.
+        </p>
+</div>
+<!-- 4 Ports Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Port 1: Karachi Port -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold">KPT • PORT CODE: PKKHI</span>
+<span class="w-2 h-2 rounded-full bg-emerald-glow"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Karachi Port (KPT)</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md">Historic Deep-Water Natural Port</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              The premier maritime gateway handling over 60% of national cargo. Equipped with East &amp; West Wharves, container terminals (KICT &amp; SAPT), bulk cargo berths, and oil piers.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded font-label-sm text-label-sm space-y-1 mb-space-md">
+<div class="flex justify-between"><span class="text-outline">Max Permissible Draft:</span> <span class="font-semibold text-primary">13.0m - 16.0m</span></div>
+<div class="flex justify-between"><span class="text-outline">Active Wharves:</span> <span class="font-semibold text-primary">30 Berths + 3 OP</span></div>
+<div class="flex justify-between"><span class="text-outline">Piloting:</span> <span class="font-semibold text-emerald-glow">Compulsory 24/7</span></div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Harbor Dispatch</span>
+<span class="text-primary font-medium">khi@ews.com.pk</span>
+</div>
+</div>
+<!-- Port 2: Port Mohammad Bin Qasim -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold">PQA • PORT CODE: PKBQM</span>
+<span class="w-2 h-2 rounded-full bg-emerald-glow"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Port Muhammad Bin Qasim</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md">Second Largest Deep-Sea Port</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Handling 35%+ of Pakistan’s international seaborne trade. Major industrial nexus for LNG/LPG imports, steel mills, container lines (QICT), and dedicated coal/grain terminals.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded font-label-sm text-label-sm space-y-1 mb-space-md">
+<div class="flex justify-between"><span class="text-outline">Max Permissible Draft:</span> <span class="font-semibold text-primary">12.0m - 13.0m</span></div>
+<div class="flex justify-between"><span class="text-outline">Channel Length:</span> <span class="font-semibold text-primary">45 km Tidal</span></div>
+<div class="flex justify-between"><span class="text-outline">Cargo Profile:</span> <span class="font-semibold text-primary">Energy, Bulk, Box</span></div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Harbor Dispatch</span>
+<span class="text-primary font-medium">qasim@ews.com.pk</span>
+</div>
+</div>
+<!-- Port 3: Gwadar Port -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold">GPA • PORT CODE: PKGWD</span>
+<span class="w-2 h-2 rounded-full bg-signal-cyan"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Gwadar Deep Sea Port</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md">Warm-Water CPEC Nexus</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Strategically situated on the Arabian Sea at the mouth of the Persian Gulf. Warm-water deep-sea port designed for large-draft transshipment and Central Asia transit trade.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded font-label-sm text-label-sm space-y-1 mb-space-md">
+<div class="flex justify-between"><span class="text-outline">Max Permissible Draft:</span> <span class="font-semibold text-primary">14.5m</span></div>
+<div class="flex justify-between"><span class="text-outline">Multipurpose Berths:</span> <span class="font-semibold text-primary">3 Berths (602m)</span></div>
+<div class="flex justify-between"><span class="text-outline">Transit Route:</span> <span class="font-semibold text-primary">CPEC Corridor</span></div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Gwadar Agency</span>
+<span class="text-primary font-medium">gwadar@ews.com.pk</span>
+</div>
+</div>
+<!-- Port 4: Gadani Ship Recycling -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold">GADANI • BALOCHISTAN</span>
+<span class="w-2 h-2 rounded-full bg-emerald-glow"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Gadani Ship Breaking Hub</h3>
+<div class="font-label-sm text-label-sm text-outline mb-space-md">World Ship Recycling Anchorage</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              One of the world’s foremost ship demolition centers. East Wind Shipping handles full end-of-life vessel documentation, beaching permissions, gas-free audits, and customs discharge.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded font-label-sm text-label-sm space-y-1 mb-space-md">
+<div class="flex justify-between"><span class="text-outline">Beaching Front:</span> <span class="font-semibold text-primary">132 Plots / 10 km</span></div>
+<div class="flex justify-between"><span class="text-outline">Demo Agency:</span> <span class="font-semibold text-primary">Complete Husbandry</span></div>
+<div class="flex justify-between"><span class="text-outline">Survey &amp; Audit:</span> <span class="font-semibold text-emerald-glow">Customs &amp; Gas-Free</span></div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-border-hairline flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Gadani Desk</span>
+<span class="text-primary font-medium">gadani@ews.com.pk</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 6: TRUSTED ENTERPRISE ALLIANCES BANNER
+  ========================================================================= -->
+<section class="w-full bg-surface-card py-space-lg border-y border-border-hairline">
+<div class="max-w-[1440px] mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="font-label-sm text-label-sm text-outline tracking-wider uppercase shrink-0">
+          Premier Shipping Enterprise Alliances &amp; Representation:
+        </div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter w-full lg:w-auto items-center">
+<div class="p-3 bg-surface-container-low rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">directions_boat</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary">GLOBAL FEEDER</div>
+<div class="text-[10px] text-on-surface-variant font-label-sm">Shipping LLC (Managed Partner)</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-glow text-[20px]">inventory_2</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary">GREEN PAK SHIPPING</div>
+<div class="text-[10px] text-on-surface-variant font-label-sm">Evergreen Container Line</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">anchor</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary">KARACHI PORT TRUST</div>
+<div class="text-[10px] text-on-surface-variant font-label-sm">Licensed Ship Agency</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">domain</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary">PORT QASIM (PQA)</div>
+<div class="text-[10px] text-on-surface-variant font-label-sm">Terminal Port Operator</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 7: INQUIRIES & DIVISION DISPATCH SECTION
+  ========================================================================= -->
+<section class="w-full bg-surface py-space-xl lg:py-24" id="contact">
+<div class="max-w-[1440px] mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Corporate & Facility Coordinates (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-space-xs font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">
+<span class="w-6 h-px bg-secondary"></span>
+<span>24/7 Operations Desk</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-space-md">
+              Contact Vessel Agency &amp; Depot Dispatch
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg">
+              Engage our operations team for immediate proforma disbursements, tanker berth planning, container depot gate passes, or demo ship beaching clearances.
+            </p>
+<!-- Coordinate Cards -->
+<div class="space-y-space-md mb-space-lg">
+<div class="p-space-md bg-surface-card rounded-lg border border-border-hairline">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm text-[16px] text-primary mb-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">business</span>
+<span>Head Office • Karachi Maritime Centre</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-6">
+                  East Wind Shipping Co. (Pvt) Ltd.<br/>
+                  Karachi, Pakistan.
+                </div>
+<div class="mt-2 pl-6 font-label-sm text-label-sm text-primary flex items-center gap-4">
+<span>Tel: +92 21 3285 2401-05</span>
+<span class="text-border-subtle">•</span>
+<span>Email: <a class="text-secondary hover:underline" href="mailto:info@ews.com.pk">info@ews.com.pk</a></span>
+</div>
+</div>
+<div class="p-space-md bg-surface-card rounded-lg border border-border-hairline">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm text-[16px] text-primary mb-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">warehouse</span>
+<span>TPX Container Depot</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-6">
+                  M.T. Khan Road, TPX Yard (2 Km from Karachi Port Gates).<br/>
+                  Capacity: 16,000 m² | Direct WebOC Terminal Gate Interface.
+                </div>
+<div class="mt-2 pl-6 font-label-sm text-label-sm text-primary">
+                  Email: <a class="text-secondary hover:underline" href="mailto:depot@ews.com.pk">depot@ews.com.pk</a>
+</div>
+</div>
+<div class="p-space-md bg-surface-card rounded-lg border border-border-hairline">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm text-[16px] text-primary mb-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">anchor</span>
+<span>East Wharf Facility – Keamari</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-6">
+                  East Wharf, Keamari Port Precinct, Karachi.<br/>
+                  Capacity: 8,000 m² | Heavy Machinery &amp; Box Repair Workshop.
+                </div>
+<div class="mt-2 pl-6 font-label-sm text-label-sm text-primary">
+                  Email: <a class="text-secondary hover:underline" href="mailto:keamari@ews.com.pk">keamari@ews.com.pk</a>
+</div>
+</div>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-outline flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-glow"></span>
+<span>VHF Channel 16 / 12 Karachi Port Agency Watch 24 Hours</span>
+</div>
+</div>
+<!-- Right: Fast Division Dispatch Form (7 cols) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-card rounded-xl p-space-xl shadow-lg border border-border-hairline">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Direct Operational Inquiry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+              Route your request directly to the responsible division head for an immediate technical and commercial response.
+            </p>
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Your message has been routed to the designated maritime division. Our operations room will respond within 60 minutes.'); this.reset();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">First &amp; Last Name *</label>
+<input class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all" placeholder="Capt. Tariq Rahman" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">Company / Principal Line *</label>
+<input class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all" placeholder="Maritime Shipping Line" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">Email Address *</label>
+<input class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all" placeholder="dispatch@vesselline.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">Direct Telephone / Mobile</label>
+<input class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all" placeholder="+971 4 000 0000 / +92 300 0000000" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">Routing Division *</label>
+<select class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all">
+<option value="tanker">Tanker / Tramper Division (Chemicals/Ethanol/Petroleum)</option>
+<option value="breakbulk">Break Bulk &amp; Project Cargo Division</option>
+<option value="drybulk">Dry Bulk Vessels (Fertilizer/Grain/Scrap/Coal)</option>
+<option value="feeder">Container Feeder Division (Global Feeder Shipping)</option>
+<option value="cordelia">Cordelia Container Division</option>
+<option value="depot">Container Depot Division (TPX &amp; Keamari Yards)</option>
+<option value="gadani">Demo Ships &amp; Gadani Recycling Agency</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">Port of Call / Terminal</label>
+<select class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all">
+<option>Karachi Port Trust (East / West Wharves)</option>
+<option>Port Muhammad Bin Qasim (PQA)</option>
+<option>Gwadar Deep Sea Port (GPA)</option>
+<option>Gadani Demolition Anchorage</option>
+<option>TPX Off-Dock Container Depot</option>
+<option>Keamari Off-Dock Terminal</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5">Message / Cargo &amp; Vessel Specifications</label>
+<textarea class="w-full px-4 py-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-white border border-transparent focus:border-border-subtle transition-all" placeholder="Please state vessel DWT, draft, cargo volume, commodity nature, expected laycan, or container depot requirements..." required="" rows="4"></textarea>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="font-label-sm text-label-sm text-outline flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Confidential Port Disbursement Guarantee</span>
+</div>
+<button class="px-8 py-3.5 bg-abyssal-navy hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold rounded shadow-md transition-colors flex items-center gap-2" type="submit">
+<span>Dispatch Request</span>
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Interactive Script for Widget Tab Switching -->
+<script>
+  function switchWidgetTab(tabName) {
+    const tabs = ['cargo', 'depot', 'schedule'];
+    tabs.forEach(function(t) {
+      const btn = document.getElementById('tab-' + t);
+      const panel = document.getElementById('panel-' + t);
+      if (t === tabName) {
+        btn.className = 'flex-1 py-2 text-center font-label-sm text-label-sm rounded transition-all bg-surface-card text-primary font-medium shadow-sm';
+        panel.classList.remove('hidden');
+      } else {
+        btn.className = 'flex-1 py-2 text-center font-label-sm text-label-sm rounded transition-all text-on-surface-variant hover:text-primary';
+        panel.classList.add('hidden');
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-card border-t border-border-hairline mt-margin"><div class="max-w-[1440px] mx-auto px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter pb-space-xl border-b border-border-hairline"><div class="lg:col-span-2 pr-0 lg:pr-space-xl"><div class="flex items-center gap-space-sm mb-space-md"><img alt="East Wind Shipping Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNM8DN6K4aJQTTyfit1bFq78YxGmsguG1ZZooUM_xUdaFbtk8uQzUduBUwMjPC596pR3yzKwcAqiA3hxJzjmOaOEj1jEvmvkW7Tx-MnrleyisQsrZEF4kHtfqi7r3gMVxxIB67UqQefFLS4RV7Qif6a5sHyToC4zWlPLJvwae-ohUz7A9ROXn_D2vK48CiwutjlEDTU0mn28qd4Ui9dDyXCtgl80JtBggOhyDYg7isHu0BzjqIk7dJKKM"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary">EAST WIND SHIPPING</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md max-w-md">East Wind Shipping Co. (Pvt) Ltd. is a premier ship agency, chartering broker, and multimodal freight services conglomerate operating continuously across all major maritime hubs and dry ports in Pakistan since 1993.</p><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span><span>ISO 9001:2015 CERTIFIED SHIP AGENCY</span></div></div><div><h4 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold mb-space-md">Maritime Divisions</h4><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="maritime-divisions" href="#">Tanker Agency &amp; Bunkering</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="maritime-divisions" href="#">Break Bulk &amp; Project Cargo</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="maritime-divisions" href="#">Container Feeder Agency</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="maritime-divisions" href="#">Dry Bulk Chartering</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="maritime-divisions" href="#">Container Freight Station &amp; Depot</a></li></ul></div><div><h4 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold mb-space-md">Pakistan Port Hubs</h4><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pakistan-ports" href="#">Karachi Port Trust (KPT)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pakistan-ports" href="#">Port Muhammad Bin Qasim</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pakistan-ports" href="#">Gwadar Deep Sea Port</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pakistan-ports" href="#">Gadani Ship Breaking Hub</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="country-profile" href="#">Pakistan Customs &amp; Tariffs</a></li></ul></div><div><h4 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold mb-space-md">Corporate &amp; Alliances</h4><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="about-profile" href="#">About East Wind Group</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="mission-values" href="#">Mission &amp; Integrity</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="quality-policy" href="#">Quality &amp; Safety Compliance</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="news-updates" href="#">Maritime Advisories</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="contact-us" href="#">Head Office &amp; Branches</a></li></ul></div></div><div class="py-space-lg border-b border-border-hairline flex flex-wrap items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Principal Partners &amp; Alliances:</span><div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><span class="hover:text-primary transition-colors cursor-default">Global Feeder Shipping LLC</span><span class="text-border-subtle">•</span><span class="hover:text-primary transition-colors cursor-default">Green Pak Shipping / Evergreen Marine</span><span class="text-border-subtle">•</span><span class="hover:text-primary transition-colors cursor-default">All World Shipping (AWS)</span></div></div><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-emerald-glow"></span>EDI &amp; WebOC Automated Terminal Connection</div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-outline"><div>© 2025 East Wind Shipping Co. (Pvt) Ltd. All rights reserved. Registered Ship Agent &amp; Multimodal Operator.</div><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" data-path="country-profile" href="#">Port Regulations</a><a class="hover:text-on-surface transition-colors" data-path="about-profile" href="#">Corporate Governance</a><a class="hover:text-on-surface transition-colors" data-path="contact-us" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="contact-us" href="#">Terms of Carriage</a></div></div></div></footer></body></html>

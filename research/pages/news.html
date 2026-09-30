@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <h2>You will be redirected to the new URL in <span id="countdown">5</span> seconds.</h2>
+    <p>Redirect URL: <strong id="redirectUrl">https://maritime-executive.com/shipping-news</strong></p>
+    <p>The current tab will return to the <a href="https://ews.com.pk">home page</a> automatically.</p>
+
+    <script>
+        const redirectUrl = 'https://maritime-executive.com/shipping-news'; // The destination URL
+        const homeUrl = 'https://ews.com.pk'; // The home page URL for the current tab
+        let timeLeft = 5;
+        const countdownElement = document.getElementById('countdown');
+        const urlElement = document.getElementById('redirectUrl');
+        urlElement.textContent = redirectUrl;
+
+        // Function to handle the redirection
+        function initiateRedirect() {
+            // Open the new URL in a new tab/window
+            // The browser's pop-up blocker might interfere with this if not allowed
+            window.open(redirectUrl, '_blank'); 
+
+            // Redirect the current tab back to the home page
+            // Using replace() is cleaner as it prevents using the 'back' button to get here again
+            window.location.replace(homeUrl);
+        }
+
+        // Countdown timer display
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer); // Stop the timer
+                initiateRedirect();
+            }
+        }, 1000); // Update every second
+    </script>
+</body>
+</html>
+

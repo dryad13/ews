@@ -1,0 +1,30 @@
+export const country = {
+  title: "Pakistan – Gateway to the East",
+  paragraphs: [
+    'The word Pakistan derived from Urdu, means "The Land of Pure". Pakistan got independence from British India on 14th August 1947 under the leadership of Muhammad Ali Jinnah. Pakistan\'s history dates back to the ancient Indus civilization, remains of which still can be found at Harappa and Mohenjo-Daro. The Indus rule ended around 1500 BC. The Moguls – the last dynasty assumed control in the sixteenth century. From the 1750s, the influence of British grew, but it was not until 1858 that direct British rule began.',
+    "Today, Pakistan is a federal Islamic republic with its capital, Islamabad in the north and its commercial hub as Karachi with around 16 Million populations in the South. Country's population per 2010 record shows 160 Million. Pakistan displays some of Asia's most magnificent landscapes as it stretches from the Arabian Sea at its southern border to the world's most spectacular mountain ranges in the north.",
+    "Located in South Asia, Pakistan shares an eastern border with India and a north-eastern border with China. Iran makes up the country's south-west border and Afghanistan runs along its western and northern edge. The Arabian Sea is Pakistan's southern boundary with 1,064 km of coastline. The country has a total area of 796,095 sq km and is nearly four times the size of the United Kingdom. From Gwadar Bay in its south-western corner, the country extends more than 1,800 km to the Khunjerab Pass on China's border.",
+    "Pakistan has dry climate with extreme temperatures at places. One third of the country's land consists of plains along the Indus Valley in the south and east. The remainder in the west and north-west is a continuation of eastern Himalayas. In the north the land rises to the world second highest peak, K2 at 8,611 meters.",
+    "Agriculture is the mainstay of Pakistan's economy, employing almost 50% of the man power. Wheat, rice, cotton, sugarcane, and tobacco are the chief crops, and cattle and sheep are raised. Most of Pakistan's agricultural output comes from the Indus extended farming into arid areas, and new varieties of crops have increased yields.",
+    "Pakistan's industrial base is able to supply many of the country's needs in consumer goods, although production has slowed in recent years. The country's natural resources provide materials for such industries as textile production (the biggest earner of foreign exchange), oil refining, metal processing, and cement and fertilizer production. Remittances from Pakistanis working abroad constitute the second largest source of foreign exchange. Pakistan's chief imports are petroleum, machinery, transport equipment, chemicals and edible fats and oils. The chief trading partners are the European Union nations, USA, Japan, and China.",
+    "Karachi Port and Port Mohammad Bin Qasim are the two main ports of Pakistan. The port of Karachi has long been considered a safe harbor, although it was only a small fishing village in the early nineteenth century. Karachi Port is now handling over 11.74 million tons of liquid cargo and 25.45 million tons of dry cargo, including 1,213,744 TEUs which constitute about 60% of import/ export of the country.",
+    "PQA is the second deep sea industrial-cum-commercial port operating under landlord concept. The Port is situated in Indus delta region at a distance of 28 nautical miles in the south-east of Karachi. PQA is the most eco-friendly port and is geographically located on the trade route of Arabian Gulf. The port currently caters for more than 40% of seaborne trade requirements of the country.",
+    "Gwadar Port is the third port of Pakistan - Karachi and Port Qasim being the other two. Gwadar borders on Arabian Sea and lies in the Balochistan Province. It is about 533 km from Karachi and 120 km from the Iranian border. Gwadar Port is located at the mouth of the Persian Gulf and outside the Straits of Hormuz.",
+    "Ship breaking is quite active at Pakistan's beach of Gadani – 50 km north-west of Karachi, the local ship-breaking industry reached its peak in mid 1980s, providing jobs for more than 30,000 workers. During 2011 almost 123 ships with light weight of One Million Tons beached at Gadani for demolition.",
+    "In keeping with the spirit of international cooperation that calls for landlocked countries to be given access to the sea, Pakistan has long been an important transit link for its neighbors, including Afghanistan and Central Asian States. From its main ports of Karachi and Bin Qasim the country offers the shortest and most direct route for sea-born cargoes to and from those countries that would otherwise have limited access to the international commerce.",
+  ],
+  businessLinks: [
+    { name: "Pakistan Ship Agents Association", url: "https://www.psaa.org.pk" },
+    {
+      name: "Federation of Pakistan Chambers of Commerce and Industry",
+      url: "https://www.fpcci.com.pk",
+    },
+    { name: "Karachi Chamber Of Commerce and Industry", url: "https://www.kcci.com.pk" },
+    { name: "Federal Board of Revenue, Government of Pakistan", url: "https://www.fbr.gov.pk" },
+    { name: "Trade Development Authority Of Pakistan", url: "https://www.tdap.gov.pk" },
+    { name: "Pakistan Tourism Development Corporation", url: "https://www.tourism.gov.pk" },
+    { name: "Pakistan Newspaper (Dawn ePaper)", url: "https://epaper.dawn.com" },
+  ],
+  mapNote:
+    "Pakistan Map reference page from the legacy site is retained as a country geography overview. Detailed port coordinates are listed on each Pakistan Ports page.",
+} as const;

@@ -1,0 +1,126 @@
+﻿{
+    "screenId":  "projects/2317495978888367639/screens/c434bfa619954785b39bbef28e0f6190",
+    "localHtml":  "e:\\EWS\\stitch\\looping-ship-hero.html",
+    "sitePagesCrawled":  [
+                             "home",
+                             "profile",
+                             "mission",
+                             "values",
+                             "quality",
+                             "country",
+                             "pakbusiness",
+                             "map",
+                             "karachi-port",
+                             "binqasim",
+                             "gwadar",
+                             "gadani",
+                             "contact-company",
+                             "tankertramper",
+                             "container-feeder",
+                             "cordelia",
+                             "container-depot",
+                             "privacy",
+                             "legal-notice",
+                             "news"
+                         ],
+    "stitchScreen":  "East Wind Shipping - Looping Ship Hero",
+    "localPng":  "e:\\EWS\\stitch\\looping-ship-hero.png",
+    "coveredOnHero":  [
+                          "Company intro / welcome copy (condensed)",
+                          "Commodity \u0026 vessel types (tankers, break bulk, dry bulk, container feeder, Gadani demo)",
+                          "TPX depot 16,000 m2 + East Wharf Keamari 8,000 m2",
+                          "Green Pak Shipping / Evergreen alliance",
+                          "Global Feeder Shipping LLC partnership",
+                          "Maritime divisions overview cards",
+                          "Pakistan ports directory cards (KPT, Qasim, Gwadar, Gadani)",
+                          "Contact / inquiry forms (generic)",
+                          "Privacy Policy link"
+                      ],
+    "missingOrThin":  [
+                          {
+                              "url":  "https://ews.com.pk/profile/mission.php",
+                              "note":  "Full mission copy not on hero; only nav link Mission \u0026 Values",
+                              "area":  "Mission Statement"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/profile/values.php",
+                              "note":  "SHE, Ethics, Professionalism, Customer Focus sections missing",
+                              "area":  "Our Values"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/profile/quality.php",
+                              "note":  "Full quality policy text missing",
+                              "area":  "Quality Policy"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/countryprofile/index.php",
+                              "note":  "Long Gateway to the East history/economy content missing (~5k chars)",
+                              "area":  "Pakistan Country Profile"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/countryprofile/pakbusiness.php",
+                              "note":  "External org links (PSAA, FPCCI, KCCI, FBR, TDAP, etc.) missing",
+                              "area":  "Pakistan Business Links"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/countryprofile/map.php",
+                              "note":  "Map page/image not in hero",
+                              "area":  "Pakistan Map"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/portinfo/index.php",
+                              "note":  "Detailed dry berth LOA/beam/draft tables not included",
+                              "area":  "Karachi Port berth tables"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/portinfo/binqasim.php",
+                              "note":  "Full MW/QICT berth restriction tables not included",
+                              "area":  "Port Qasim berth tables"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/portinfo/gwadarinfo.php",
+                              "note":  "Full LOA/beam/draft/DWT/approaches detail thin vs live page",
+                              "area":  "Gwadar port parameters"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/portinfo/gadani.php",
+                              "note":  "Ship demolition call procedures / anchorage detail thin",
+                              "area":  "Gadani demolition guidance"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/contact/index.php",
+                              "note":  "Bahria Complex II address, PABX, Capt Javed Iqbal, Hunain Javed, Capt Anwar Ali, support emails missing",
+                              "area":  "HQ + staff directory"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/contact/tankertramperdivision.php",
+                              "note":  "Named officers + direct lines missing",
+                              "area":  "Tanker Tramper contacts"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/contact/containerfeederdivision.php",
+                              "note":  "Named GFS staff + emails missing",
+                              "area":  "Container Feeder contacts"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/contact/cordeliacontainerdivision.php",
+                              "note":  "Named Cordelia staff + cordelialine.com missing",
+                              "area":  "Cordelia Container contacts"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/contact/containerdepotdivision.php",
+                              "note":  "TPX yard phones + Haroon Musa / Abdul Aziz missing",
+                              "area":  "Container Depot contacts"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/news/news.htm",
+                              "note":  "Redirects to maritime-executive.com; hero has advisory banner but no news page",
+                              "area":  "Shipping News"
+                          },
+                          {
+                              "url":  "https://ews.com.pk/legal-notice",
+                              "note":  "Placeholder legal page; Privacy exists but Terms on live footer is #",
+                              "area":  "Legal Notice"
+                          }
+                      ]
+}

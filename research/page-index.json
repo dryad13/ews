@@ -1,0 +1,186 @@
+﻿[
+    {
+        "slug":  "home",
+        "url":  "https://ews.com.pk/",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  2164,
+        "file":  "e:\\EWS\\research\\pages\\home.html"
+    },
+    {
+        "slug":  "profile",
+        "url":  "https://ews.com.pk/profile/index.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  2378,
+        "file":  "e:\\EWS\\research\\pages\\profile.html"
+    },
+    {
+        "slug":  "mission",
+        "url":  "https://ews.com.pk/profile/mission.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  978,
+        "file":  "e:\\EWS\\research\\pages\\mission.html"
+    },
+    {
+        "slug":  "values",
+        "url":  "https://ews.com.pk/profile/values.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  2097,
+        "file":  "e:\\EWS\\research\\pages\\values.html"
+    },
+    {
+        "slug":  "quality",
+        "url":  "https://ews.com.pk/profile/quality.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  745,
+        "file":  "e:\\EWS\\research\\pages\\quality.html"
+    },
+    {
+        "slug":  "country",
+        "url":  "https://ews.com.pk/countryprofile/index.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  5257,
+        "file":  "e:\\EWS\\research\\pages\\country.html"
+    },
+    {
+        "slug":  "pakbusiness",
+        "url":  "https://ews.com.pk/countryprofile/pakbusiness.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  926,
+        "file":  "e:\\EWS\\research\\pages\\pakbusiness.html"
+    },
+    {
+        "slug":  "map",
+        "url":  "https://ews.com.pk/countryprofile/map.php",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  516,
+        "file":  "e:\\EWS\\research\\pages\\map.html"
+    },
+    {
+        "slug":  "karachi-port",
+        "url":  "https://ews.com.pk/portinfo/index.php",
+        "status":  200,
+        "title":  "KPT-EastWind Shipping",
+        "chars":  3414,
+        "file":  "e:\\EWS\\research\\pages\\karachi-port.html"
+    },
+    {
+        "slug":  "binqasim",
+        "url":  "https://ews.com.pk/portinfo/binqasim.php",
+        "status":  200,
+        "title":  "PQA - EastWind Shipping",
+        "chars":  3662,
+        "file":  "e:\\EWS\\research\\pages\\binqasim.html"
+    },
+    {
+        "slug":  "gwadar",
+        "url":  "https://ews.com.pk/portinfo/gwadarinfo.php",
+        "status":  200,
+        "title":  "Gwadar - EastWind Shipping",
+        "chars":  2751,
+        "file":  "e:\\EWS\\research\\pages\\gwadar.html"
+    },
+    {
+        "slug":  "gadani",
+        "url":  "https://ews.com.pk/portinfo/gadani.php",
+        "status":  200,
+        "title":  "Gadani - EastWind Shipping",
+        "chars":  1820,
+        "file":  "e:\\EWS\\research\\pages\\gadani.html"
+    },
+    {
+        "slug":  "contact-company",
+        "url":  "https://ews.com.pk/contact/index.php",
+        "status":  200,
+        "title":  "Contact - EastWind",
+        "chars":  1154,
+        "file":  "e:\\EWS\\research\\pages\\contact-company.html"
+    },
+    {
+        "slug":  "tankertramper",
+        "url":  "https://ews.com.pk/contact/tankertramperdivision.php",
+        "status":  200,
+        "title":  "Tanker Tramper",
+        "chars":  1021,
+        "file":  "e:\\EWS\\research\\pages\\tankertramper.html"
+    },
+    {
+        "slug":  "container-feeder",
+        "url":  "https://ews.com.pk/contact/containerfeederdivision.php",
+        "status":  200,
+        "title":  "Container Feeder",
+        "chars":  1126,
+        "file":  "e:\\EWS\\research\\pages\\container-feeder.html"
+    },
+    {
+        "slug":  "cordelia",
+        "url":  "https://ews.com.pk/contact/cordeliacontainerdivision.php",
+        "status":  200,
+        "title":  "Cordelia Container",
+        "chars":  997,
+        "file":  "e:\\EWS\\research\\pages\\cordelia.html"
+    },
+    {
+        "slug":  "container-depot",
+        "url":  "https://ews.com.pk/contact/containerdepotdivision.php",
+        "status":  200,
+        "title":  "Container Depot Division",
+        "chars":  863,
+        "file":  "e:\\EWS\\research\\pages\\container-depot.html"
+    },
+    {
+        "slug":  "privacy",
+        "url":  "https://ews.com.pk/privacy",
+        "status":  200,
+        "title":  "Privacy - ews.com.pk",
+        "chars":  11248,
+        "file":  "e:\\EWS\\research\\pages\\privacy.html"
+    },
+    {
+        "slug":  "legal-notice",
+        "url":  "https://ews.com.pk/legal-notice",
+        "status":  200,
+        "title":  "Legal Notice - ews.com.pk",
+        "chars":  169,
+        "file":  "e:\\EWS\\research\\pages\\legal-notice.html"
+    },
+    {
+        "slug":  "profile-dir",
+        "url":  "https://ews.com.pk/profile/",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  2378,
+        "file":  "e:\\EWS\\research\\pages\\profile-dir.html"
+    },
+    {
+        "slug":  "country-dir",
+        "url":  "https://ews.com.pk/countryprofile/",
+        "status":  200,
+        "title":  "EastWind Shipping",
+        "chars":  5257,
+        "file":  "e:\\EWS\\research\\pages\\country-dir.html"
+    },
+    {
+        "slug":  "portinfo-dir",
+        "url":  "https://ews.com.pk/portinfo/",
+        "status":  200,
+        "title":  "KPT-EastWind Shipping",
+        "chars":  3414,
+        "file":  "e:\\EWS\\research\\pages\\portinfo-dir.html"
+    },
+    {
+        "slug":  "contact-dir",
+        "url":  "https://ews.com.pk/contact/",
+        "status":  200,
+        "title":  "Contact - EastWind",
+        "chars":  1154,
+        "file":  "e:\\EWS\\research\\pages\\contact-dir.html"
+    }
+]
