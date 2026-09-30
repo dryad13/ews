@@ -28,7 +28,7 @@ export const company = {
       icon: "verified",
       title: "Green Pak Shipping",
       subtitle: "Evergreen Container Line Agency",
-      body: "East Wind Shipping is an integral part of a premier shipping enterprise holding an established Liner Agency — Green Pak Shipping, proudly representing Evergreen Container Line across nationwide port terminals in Pakistan.",
+      body: "East Wind Shipping is an integral part of a premier shipping enterprise holding an established Liner Agency, Green Pak Shipping, proudly representing Evergreen Container Line across nationwide port terminals in Pakistan.",
       footerLeft: "Global Container Liner",
       footerRight: "Karachi & Qasim",
       href: "http://www.greenpakshipping.com/",

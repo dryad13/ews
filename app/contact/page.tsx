@@ -37,11 +37,11 @@ export default function ContactPage() {
                   <div>Website: {hq.website}</div>
                 </div>
               </div>
-              {/* Legacy contact page graphic — eco maritime emblem */}
+              {/* Legacy contact page graphic: eco maritime emblem */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/contactbg.png"
-                alt="East Wind Shipping — sustainable maritime operations"
+                alt="East Wind Shipping: sustainable maritime operations"
                 className="mx-auto h-auto w-[180px] shrink-0 object-contain sm:mx-0 sm:w-[200px]"
               />
             </div>

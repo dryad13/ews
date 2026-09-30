@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | East Wind Shipping",
   },
   description:
-    "Precision maritime logistics and shipping agency in Pakistan — vessel husbandry, feeder representation, and off-dock container depot services.",
+    "Precision maritime logistics and shipping agency in Pakistan: vessel husbandry, feeder representation, and off-dock container depot services.",
 };
 
 export default function RootLayout({

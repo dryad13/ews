@@ -44,15 +44,15 @@ export default function AboutPage() {
               </h3>
               <ul className="space-y-space-md font-body text-body-sm text-on-surface-variant">
                 <li>
-                  <strong className="text-primary">Green Pak Shipping</strong> — Evergreen Container
+                  <strong className="text-primary">Green Pak Shipping</strong>: Evergreen Container
                   Line agency in Pakistan
                 </li>
                 <li>
-                  <strong className="text-primary">Global Feeder Shipping LLC</strong> — Feeder market
+                  <strong className="text-primary">Global Feeder Shipping LLC</strong>: Feeder market
                   leader representation
                 </li>
                 <li>
-                  <strong className="text-primary">Cordelia Container Line</strong> — Asia / Gulf /
+                  <strong className="text-primary">Cordelia Container Line</strong>: Asia / Gulf /
                   Africa container services
                 </li>
               </ul>

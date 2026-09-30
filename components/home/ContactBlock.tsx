@@ -12,7 +12,7 @@ export function ContactBlock() {
     const to = divisionEmails[division] || "ops@ews.com.pk";
     mailtoInquiry(
       to,
-      `Operational Inquiry — ${division}`,
+      `Operational Inquiry: ${division}`,
       `Name: ${fd.get("name")}\nCompany: ${fd.get("company")}\nEmail: ${fd.get("email")}\nPhone: ${fd.get("phone")}\nDivision: ${fd.get("division")}\nPort: ${fd.get("port")}\n\n${fd.get("message")}`,
     );
     e.currentTarget.reset();
