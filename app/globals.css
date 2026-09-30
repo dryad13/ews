@@ -188,5 +188,6 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+  font-display: block;
   -webkit-font-smoothing: antialiased;
 }
