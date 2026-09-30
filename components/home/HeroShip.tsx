@@ -55,18 +55,18 @@ export function HeroShip() {
       <div className="pointer-events-none absolute -top-32 -right-32 z-[1] h-[600px] w-[600px] rounded-full bg-secondary/15 blur-[140px]" />
       <div className="pointer-events-none absolute bottom-0 left-1/4 z-[1] h-[400px] w-[400px] rounded-full bg-signal-cyan/10 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-gutter py-space-xl lg:py-24">
-        <div className="mb-space-lg flex flex-wrap items-center justify-between gap-space-sm border-b border-white/15 pb-space-lg backdrop-blur-[2px]">
-          <div className="flex items-center gap-space-sm font-label text-label-sm tracking-widest text-surface-variant">
-            <span className="inline-block h-2 w-2 rounded-full bg-emerald-glow shadow-[0_0_8px_#059669]" />
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 py-space-lg sm:px-gutter sm:py-space-xl lg:py-24">
+        <div className="mb-space-md flex flex-wrap items-center justify-between gap-2 border-b border-white/15 pb-space-md backdrop-blur-[2px] sm:mb-space-lg sm:gap-space-sm sm:pb-space-lg">
+          <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 font-label text-[10px] tracking-widest text-surface-variant sm:text-label-sm">
+            <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-glow shadow-[0_0_8px_#059669]" />
             <span className="font-medium text-white">PK-KHI: 24.8607° N, 67.0011° E</span>
-            <span className="text-white/30">|</span>
-            <span className="font-semibold tracking-wider text-secondary-fixed">
+            <span className="hidden text-white/30 sm:inline">|</span>
+            <span className="hidden font-semibold tracking-wider text-secondary-fixed sm:inline">
               VESSEL AGENCY & MULTIMODAL LOGISTICS
             </span>
           </div>
           <div className="flex items-center gap-space-md font-label text-label-sm text-surface-variant">
-            <span className="hidden text-white/80 sm:inline">
+            <span className="hidden text-white/80 md:inline">
               PORT AGENTS • LINER REPRESENTATION • OFF-DOCK CFS
             </span>
             <span className="rounded border border-white/10 bg-white/10 px-2 py-0.5 text-[10px] font-semibold tracking-widest text-white uppercase">
@@ -83,23 +83,23 @@ export function HeroShip() {
                 Premier Maritime Gateway of Pakistan
               </span>
             </div>
-            <h1 className="mb-space-md font-headline text-headline-xl tracking-tight text-white drop-shadow-md lg:text-[56px] lg:leading-[62px]">
+            <h1 className="mb-space-md font-headline text-[32px] leading-[1.15] tracking-tight text-white drop-shadow-md sm:text-[40px] sm:leading-[48px] lg:text-[56px] lg:leading-[62px]">
               {company.heroHeadline}
             </h1>
-            <p className="mb-space-xl max-w-2xl font-body text-body-lg leading-relaxed text-surface-variant drop-shadow-sm">
+            <p className="mb-space-lg max-w-2xl font-body text-body-md leading-relaxed text-surface-variant drop-shadow-sm sm:mb-space-xl sm:text-body-lg">
               {company.heroBody}
             </p>
-            <div className="mb-space-xl flex flex-wrap items-center gap-space-md">
+            <div className="mb-space-lg flex flex-col gap-2 sm:mb-space-xl sm:flex-row sm:flex-wrap sm:items-center sm:gap-space-md">
               <Link
                 href="/divisions"
-                className="flex items-center gap-2 rounded bg-secondary px-6 py-3.5 font-body text-body-sm font-semibold text-on-secondary shadow-xl transition-colors hover:bg-secondary-fixed hover:text-on-secondary-fixed hover:shadow-2xl"
+                className="flex items-center justify-center gap-2 rounded bg-secondary px-5 py-3 font-body text-body-sm font-semibold text-on-secondary shadow-xl transition-colors hover:bg-secondary-fixed hover:text-on-secondary-fixed hover:shadow-2xl sm:px-6 sm:py-3.5"
               >
-                <span>Explore Fleet & Agency Services</span>
+                <span>Explore Fleet & Agency</span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </Link>
               <Link
                 href="/contact"
-                className="flex items-center gap-2 rounded border border-white/15 bg-white/10 px-6 py-3.5 font-body text-body-sm text-white backdrop-blur-md transition-colors hover:bg-white/20"
+                className="flex items-center justify-center gap-2 rounded border border-white/15 bg-white/10 px-5 py-3 font-body text-body-sm text-white backdrop-blur-md transition-colors hover:bg-white/20 sm:px-6 sm:py-3.5"
               >
                 <span className="material-symbols-outlined text-[18px] text-secondary-fixed">
                   support_agent
@@ -107,16 +107,16 @@ export function HeroShip() {
                 <span>Contact Vessel Agency</span>
               </Link>
             </div>
-            <div className="grid grid-cols-3 gap-gutter border-t border-white/15 pt-space-md">
+            <div className="grid grid-cols-3 gap-2 border-t border-white/15 pt-space-md sm:gap-gutter">
               {company.metrics.map((m) => (
                 <div key={m.label}>
-                  <div className="font-headline text-headline-md font-semibold tracking-tight text-white">
+                  <div className="font-headline text-[18px] font-semibold tracking-tight text-white sm:text-headline-md">
                     {m.value}
-                    <span className="font-headline text-headline-sm font-normal text-secondary-fixed">
+                    <span className="font-headline text-[13px] font-normal text-secondary-fixed sm:text-headline-sm">
                       {m.suffix}
                     </span>
                   </div>
-                  <div className="mt-1 font-label text-label-sm tracking-wider text-surface-variant uppercase">
+                  <div className="mt-1 font-label text-[9px] leading-snug tracking-wider text-surface-variant uppercase sm:text-label-sm">
                     {m.label}
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export function HeroShip() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative rounded-xl border border-white/20 bg-surface-card/95 p-space-lg text-on-surface shadow-2xl backdrop-blur-md">
+            <div className="relative rounded-xl border border-white/20 bg-surface-card/95 p-space-md text-on-surface shadow-2xl backdrop-blur-md sm:p-space-lg">
               <div className="mb-space-md flex items-center justify-between border-b border-border-hairline pb-space-sm">
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-glow" />
@@ -171,7 +171,7 @@ export function HeroShip() {
                       <option>Demo Ships & Ship Recycling (Gadani Anchorage)</option>
                     </select>
                   </div>
-                  <div className="grid grid-cols-2 gap-space-sm">
+                  <div className="grid grid-cols-1 gap-space-sm sm:grid-cols-2">
                     <div>
                       <label className="mb-1 block font-label text-label-sm tracking-wider text-on-surface-variant uppercase">
                         Port Hub
@@ -239,7 +239,7 @@ export function HeroShip() {
                       <option>East Wharf – Keamari Facility (8,000 m² Portside)</option>
                     </select>
                   </div>
-                  <div className="grid grid-cols-2 gap-space-sm">
+                  <div className="grid grid-cols-1 gap-space-sm sm:grid-cols-2">
                     <div>
                       <label className="mb-1 block font-label text-label-sm tracking-wider text-on-surface-variant uppercase">
                         Service Demand

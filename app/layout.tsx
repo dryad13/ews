@@ -50,7 +50,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${manrope.variable} ${jetbrainsMono.variable} bg-surface font-body text-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary`}
       >
         <SiteHeader />
-        <main className="w-full min-h-[calc(100vh-280px)] bg-surface pt-[116px]">
+        <main className="w-full min-h-[calc(100vh-280px)] bg-surface pt-[calc(2rem+3.5rem)] sm:pt-[calc(2.25rem+4rem)] lg:pt-[116px]">
           {children}
         </main>
         <SiteFooter />

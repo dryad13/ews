@@ -19,8 +19,8 @@ export function ContactBlock() {
   }
 
   return (
-    <section className="w-full bg-surface py-space-xl lg:py-24" id="contact">
-      <div className="mx-auto max-w-[1440px] px-gutter">
+    <section className="w-full bg-surface py-space-lg sm:py-space-xl lg:py-24" id="contact">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-gutter">
         <div className="grid grid-cols-1 gap-gutter lg:grid-cols-12">
           <div className="flex flex-col justify-between lg:col-span-5">
             <div>
@@ -72,7 +72,7 @@ export function ContactBlock() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="rounded-xl border border-border-hairline bg-surface-card p-space-xl shadow-lg">
+            <div className="rounded-xl border border-border-hairline bg-surface-card p-space-lg shadow-lg sm:p-space-xl">
               <h3 className="mb-2 font-headline text-headline-md text-primary">
                 Direct Operational Inquiry
               </h3>
@@ -179,14 +179,14 @@ export function ContactBlock() {
                     className="w-full rounded border border-transparent bg-surface-container-low px-4 py-3 font-body text-body-sm focus:border-border-subtle focus:bg-white focus:outline-none"
                   />
                 </div>
-                <div className="flex items-center justify-between pt-2">
+                <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-center gap-1.5 font-label text-label-sm text-outline">
                     <span className="material-symbols-outlined text-[16px] text-secondary">lock</span>
                     <span>Confidential Port Disbursement Guarantee</span>
                   </div>
                   <button
                     type="submit"
-                    className="flex items-center gap-2 rounded bg-abyssal-navy px-8 py-3.5 font-body text-body-sm font-semibold text-on-primary shadow-md transition-colors hover:bg-secondary"
+                    className="flex w-full items-center justify-center gap-2 rounded bg-abyssal-navy px-8 py-3.5 font-body text-body-sm font-semibold text-on-primary shadow-md transition-colors hover:bg-secondary sm:w-auto"
                   >
                     <span>Dispatch Request</span>
                     <span className="material-symbols-outlined text-[18px]">forward_to_inbox</span>

@@ -6,7 +6,7 @@ import { ports } from "@/content/ports";
 
 export function Alliances() {
   return (
-    <section className="w-full bg-surface-card py-space-xl lg:py-24">
+    <section className="w-full bg-surface-card py-space-lg sm:py-space-xl lg:py-24">
       <div className="mx-auto max-w-[1440px] px-gutter">
         <div className="mb-space-sm flex items-center gap-2 font-label text-label-sm font-semibold tracking-widest text-secondary uppercase">
           <span className="h-px w-6 bg-secondary" />
@@ -14,7 +14,7 @@ export function Alliances() {
         </div>
         <div className="mb-space-xl grid grid-cols-1 items-center gap-gutter lg:grid-cols-12">
           <div className="lg:col-span-8">
-            <h2 className="font-headline text-headline-lg tracking-tight text-primary">
+            <h2 className="font-headline text-[28px] leading-9 tracking-tight text-primary sm:text-headline-lg">
               {company.heritageHeadline}
             </h2>
           </div>
@@ -61,7 +61,7 @@ export function Alliances() {
 
 export function DivisionsGrid() {
   return (
-    <section className="w-full bg-surface py-space-xl lg:py-24" id="divisions">
+    <section className="w-full bg-surface py-space-lg sm:py-space-xl lg:py-24" id="divisions">
       <div className="mx-auto max-w-[1440px] px-gutter">
         <div className="mb-space-xl flex flex-col justify-between gap-space-md md:flex-row md:items-end">
           <div>
@@ -69,7 +69,7 @@ export function DivisionsGrid() {
               <span className="h-px w-6 bg-secondary" />
               <span>Comprehensive Vessel Husbandry</span>
             </div>
-            <h2 className="font-headline text-headline-lg tracking-tight text-primary">
+            <h2 className="font-headline text-[28px] leading-9 tracking-tight text-primary sm:text-headline-lg">
               Specialised Maritime Divisions
             </h2>
           </div>
@@ -129,7 +129,7 @@ export function DivisionsGrid() {
 
 export function DepotFacilities() {
   return (
-    <section className="w-full bg-surface-card py-space-xl lg:py-24">
+    <section className="w-full bg-surface-card py-space-lg sm:py-space-xl lg:py-24">
       <div className="mx-auto max-w-[1440px] px-gutter">
         <div className="mb-space-xs flex items-center gap-2 font-label text-label-sm font-semibold tracking-widest text-secondary uppercase">
           <span className="h-px w-6 bg-secondary" />
@@ -137,7 +137,7 @@ export function DepotFacilities() {
         </div>
         <div className="mb-space-xl grid grid-cols-1 items-end gap-gutter lg:grid-cols-12">
           <div className="lg:col-span-8">
-            <h2 className="font-headline text-headline-lg tracking-tight text-primary">
+            <h2 className="font-headline text-[28px] leading-9 tracking-tight text-primary sm:text-headline-lg">
               24,000 Square Meters of Strategically Situated Depot Space.
             </h2>
             <p className="mt-space-sm max-w-2xl font-body text-body-lg text-on-surface-variant">
@@ -150,7 +150,7 @@ export function DepotFacilities() {
           {depotFacilities.map((f) => (
             <div
               key={f.title}
-              className="flex flex-col justify-between rounded-xl bg-surface p-space-xl"
+              className="flex flex-col justify-between rounded-xl bg-surface p-space-lg sm:p-space-xl"
             >
               <div>
                 <div className="mb-space-md flex items-center justify-between">
@@ -211,7 +211,7 @@ export function DepotFacilities() {
 
 export function PortsDirectory() {
   return (
-    <section className="w-full bg-surface py-space-xl lg:py-24">
+    <section className="w-full bg-surface py-space-lg sm:py-space-xl lg:py-24">
       <div className="mx-auto max-w-[1440px] px-gutter">
         <div className="mb-space-xl flex flex-col justify-between gap-space-md md:flex-row md:items-end">
           <div>
@@ -219,7 +219,7 @@ export function PortsDirectory() {
               <span className="h-px w-6 bg-secondary" />
               <span>National Maritime Gateway Coverage</span>
             </div>
-            <h2 className="font-headline text-headline-lg tracking-tight text-primary">
+            <h2 className="font-headline text-[28px] leading-9 tracking-tight text-primary sm:text-headline-lg">
               Pakistan Ports Directory
             </h2>
           </div>
